@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="eng">
+<head>
+  <title>Spelling Game</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/spelling_game.css">
+  <script src="js/ScrollReveal.min.js"></script>
+</head>
+<body>
+
+  <div id="game">
+    <div id="game_name" class="load-hidden">
+      <span style="color: rgb(255, 0, 147);"><b><span class="name">S</span></b></span>
+      <span style="color: rgb(59, 255, 0);"><b><span class="name">P</span></b></span>
+      <span style="color: rgb(0, 194, 255);"><b><span class="name">E</span></b></span>
+      <span style="color: rgb(238, 130, 238);"><b><span class="name">L</span></b></span>
+      <span style="color: rgb(255, 165, 0);"><b><span class="name">L</span></b></span>
+      <span style="color: rgb(0, 204, 255);"><b><span class="name">I</span></b></span>
+      <span style="color: rgb(255, 0, 147);"><b><span class="name">N</span></b></span>
+      <span style="color: rgb(59, 255, 0);"><b><span class="name">G</span></b></span>
+      <span style="color: rgb(238, 130, 238);"><b><span>&nbsp;</span></b></span>
+      <span style="color: rgb(255, 0, 147);"><b><span class="name">M</span></b></span>
+      <span style="color: rgb(59, 255, 0);"><b><span class="name">A</span></b></span>
+      <span style="color: rgb(0, 194, 255);"><b><span class="name">S</span></b></span>
+      <span style="color: rgb(59, 255, 0);"><b><span class="name">T</span></b></span>
+      <span style="color: rgb(238, 130, 238);"><b><span class="name">E</span></b></span>
+      <span style="color: rgb(255, 165, 0);"><b><span class="name">R</span></b></span>
+    </div>
+
+    <div class="row">
+      <div id="tiles" class="load-hidden tile-1">
+        <div class="categories" id="category-one">
+          <p class="game_name" id="name1">
+            ONE WORD 2 FORMS
+          </p>
+          <p class="bs">
+            YOUR BEST:
+            <span id="bs1"></span>
+          </p>
+          <span class="glyphicon glyphicon-star" id="star"></span>
+        </div>
+      </div>
+
+      <div id="tiles" class="load-hidden tile-2">
+        <div class="categories" id="category-two">
+          <p class="game_name" id="name2">
+            FIND MISSPELLED
+          </p>
+          <p class="bs">
+            YOUR BEST:
+            <span id="bs2"></span>
+          </p>
+          <span class="glyphicon glyphicon-star" id="star"></span>
+        </div>
+      </div>
+
+      <div id="tiles" class="load-hidden tile-3">
+        <div class="categories" id="category-three">
+          <p class="game_name" id="name3">
+            FIND CORRECT
+          </p>
+          <p class="bs">
+            YOUR BEST:
+            <span id="bs3">0</span>
+          </p>
+          <span class="glyphicon glyphicon-star" id="star"></span>
+        </div>
+      </div>
+
+      <div id="tiles" class="load-hidden tile-4">
+        <div class="categories" id="category-four">
+          <p class="game_name" id="name4">
+            WHICH LETTER..
+          </p>
+          <p class="bs">
+            YOUR BEST:
+            <span id="bs4">0</span>
+          </p>
+          <span class="glyphicon glyphicon-star" id="star"></span>
+        </div>
+      </div>
+
+      <div id="tiles" class="load-hidden tile-5">
+        <div class="categories" id="category-five">
+          <p class="game_name" id="name5">
+            DECIDE
+          </p>
+          <p class="bs">
+            YOUR BEST:
+            <span id="bs5">0</span>
+          </p>
+          <span class="glyphicon glyphicon-star" id="star"></span>
+        </div>
+      </div>
+
+      <div id="tiles" class="load-hidden tile-6">
+        <div class="categories" id="category-six">
+          <p class="game_name" id="name6">
+            DECIDE & CORRECT
+          </p>
+          <p class="bs">
+            YOUR BEST:
+            <span id="bs6">0</span>
+          </p>
+          <span class="glyphicon glyphicon-star" id="star"></span>
+        </div>
+      </div>
+
+      <div id="tiles" class="load-hidden tile-7">
+        <div class="categories" id="category-seven">
+          <p class="game_name" id="name7">
+            MULTIPLE CHOICE
+          </p>
+          <p class="bs">
+            YOUR BEST:
+            <span id="bs7">0</span>
+          </p>
+          <span class="glyphicon glyphicon-star" id="star"></span>
+        </div>
+      </div>
+
+      <div id="tiles" class="load-hidden tile-8">
+        <div class="categories"  id="category-eight">
+          <p class="game_name" style="color: #ffffff">
+            PRACTICE
+          </p>
+          <p class="bs" style="color: #fcff00">
+            NO LIMITS! RANDOM CATEGORY!
+          </p>
+          <span class="glyphicon glyphicon-star" id="star"></span>
+        </div>
+      </div>
+
+      <div id="footer" class="load-hidden">
+        <span class="glyphicon glyphicon-star" id="footstar"></span>
+        <div class="foot_text">
+          <p>
+            OVERALL: <span id="overall">0</span>
+          </p>
+          <hr>
+        </div>
+        <span class="glyphicon glyphicon-ok" id="ok"></span>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/scroll.js"></script>
+  <script src="js/jquery-3.5.1.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/score.js"></script>
+</body>
+</html>

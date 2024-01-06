@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="eng">
+<head>
+  <title>Spelling Game</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/spelling_game.css">
+  <link rel="stylesheet" href="css/app.css">
+</head>
+<body id="body">
+  <!--BEGINNING OF HEADER-->
+  <header>
+    <div class="navigation">
+      <div class="left_sec" id="left">
+        <a href="index.html"><span class="glyphicon glyphicon-remove" id="remove"></span></a>
+        <span id="counter">1/10</span>
+      </div>
+      <div id="main">
+        <span id="title">HOW TO PLAY</span>
+        <p id="life-container" class="none">
+          <span class="life glyphicon glyphicon-heart"></span>
+          <span class="life glyphicon glyphicon-heart"></span>
+          <span class="life glyphicon glyphicon-heart"></span>
+          <span class="life glyphicon glyphicon-heart"></span>
+          <span class="life glyphicon glyphicon-heart"></span>
+        </p>
+      </div>
+      <div class="right_sec">
+        <span id="score">0</span>
+        <span class="glyphicon glyphicon-volume-off" id="vol"></span>
+      </div>
+    </div>
+  </header>
+  <!--END OF HEADER-->
+ 
+
+  <!--BEGINNING OF MAIN SECTION-->
+  <div id="click_area">
+    <div id="time">
+      100
+    </div>
+    <div id="content">
+      <!--BEGINNING OF GET READY PAGE-->
+      <div class="page none get-ready-page">
+        <div class="get-ready">
+          GET READY!
+        </div>
+        <div class="loading"></div>
+      </div>
+      <!--END OF GET READY PAGE-->
+
+      <!--BEGINNING OF ONE-WORD-TWO-FORMS, FIND-MISSPELLED, FIND-CORRECT, MULTIPLE-CHOICES-->
+      <div class="page none one-word-two-forms find-misspelled find-correct multiple-choices">
+        <p class="question" id="question"></p>
+        <div class="option">
+          <input type="checkbox" class="checkbox" id="checkbox-one"/>
+          <span class="option-one" id="option-one" data-clicked="false"></span>
+          <span id="icon-span-one" class="checking glyphicon"></span>
+        </div>
+        <div class="option">
+          <input type="checkbox" class="checkbox" id="checkbox-two" />
+          <span class="option-two" id="option-two" data-clicked="false"></span>
+          <span id="icon-span-two" class="checking glyphicon"></span>
+        </div>
+        <div class="option">
+          <input type="checkbox" class="checkbox" id="checkbox-three"/>
+          <span class="option-three" id="option-three" data-clicked="false"></span>
+          <span id="icon-span-three" class="checking glyphicon"></span>
+        </div>
+        <div class="option">
+          <input type="checkbox" class="checkbox" id="checkbox-four"/>
+          <span class="option-four" id="option-four" data-clicked="false"></span>
+          <span id="icon-span-four" class="checking glyphicon"></span>
+        </div>
+        <button class="btn-success none" data-clicked="false">Done</button>
+      </div>
+      <!--END OF ONE-WORD-TWO-FORMS, FIND-MISSPELLED, FIND-CORRECT, MULTIPLE-CHOICES-->
+
+      <!--BEGINNING OF WHICH LETTER GAME-->
+      <div class="page none which-letter" id="which-letter">
+        <div id="which-letter-header"></div>
+        <div id="which-letter-word"></div>
+        <div id="which-letter-options"></div>
+        <div id="which-letter-start">
+          <span id="startSpanOne" class="startSpanOne"></span>
+          <span id="startSpanTwo" class="startSpanTwo"></span>
+        </div>
+      </div>
+      <!--END OF WHICH LETTER GAME-->
+
+      <!--BEGINNING OF DECIDE-->
+      <div class="page none decide">
+        <p class="question" id="decide-question"></p>
+        <p id="decide-word"></p>
+        <div class="option" style="justify-content: space-around; width: inherit;">
+          <span id="yes" class="glyphicon glyphicon-ok optone yes"></span>
+          <span id="no" class="glyphicon glyphicon-remove optone no"></span>
+        </div>
+      </div>
+      <!--END OF DECIDE-->
+
+      <!--BEGINNING OF GAME OVER-->
+      <div class="page none game-over">
+        <h3 style="margin-bottom: 25px; color: red;">Game Over</h3>
+        <p id="game-over-msg-one"></p>
+        <p id="game-over-msg-two"></p>
+        <div>
+          <a href="index.html" style="color: #00c2ff"><< Main Menu</a>
+          <a href="game.html" id="play" style="color: #3bff00">Play Again >></a>
+        </div>
+      </div>
+      <!--END OF GAME OVER-->
+
+      <!--BEGINNING OF INSTRUCTIONS-->
+      <div class="page" id="instructions">
+        <p id="pone">
+          RULES
+        </p>
+        <p id="ptwo">
+        </p>
+        <p id="pthree">
+        </p>
+        <p id="pfour">
+          15 ROUNDS + 5 LIVES
+        </p>
+      </div>
+      <!--END OF INSTRUCTIONS-->
+
+      <!--BEGINNING OF ERROR-->
+      <div class="page none" id="error">
+        <p class="p-one">
+          ERROR
+        </p>
+        <p class="p-two">
+          PLEASE SELESCT GAME MODE
+        </p>
+        <p class="p-three">
+          <a href="index.html"><< Back to main menu</a>
+        </p>
+      </div>
+      <!--END OF ERROR-->
+
+    </div>
+
+    <div id="start">
+      TAP TO START
+    </div>
+  </div>
+  <!--END OF MAIN SECTION-->
+  
+
+  <!--AUDIOS -->
+  <audio src='marshmallow.mp3' id="audio" hidden>hello</audio>
+  <audio src='JavaScript Drum Kit_sounds_clap.wav' id="sound_effect" hidden>hello</audio>
+  <!--END OF AUDIOS -->
+
+  
+  <!--JAVASCRIPT FILES -->
+  <script src="js/instructions.js"></script>
+  <script src="js/questions.js"></script>
+  <script src="js/game.js"></script>
+  <script src="js/jquery-3.5.1.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <!--END OF JAVASCRIPT FILES -->
+</body>
+</html>
